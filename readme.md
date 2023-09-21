@@ -1,6 +1,8 @@
 # CBWIRE Signup Form Example
 
-Become a web development hero with CBWIRE! Here you will a signup form example with the following features:
+Become a web development hero with CBWIRE!
+
+Here you will a signup form example with the following features:
 
 * Single CBWIRE Component ( wires/SignupForm.cfm - provides all functionality )
 * Automatic validation of all fields
