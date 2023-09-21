@@ -1,3 +1,34 @@
+<cfscript>
+
+    // Data Properties
+    data = {
+        "firstname": "",
+        "lastname": "",
+        "email": "",
+        "password": "",
+        "success": false
+    };
+
+    // Validations
+    constraints = {
+        "firstname": { required: true, requiredMessage: "First name is required" },
+        "lastname": { required: true, requiredMessage: "Last name is required" },
+        "email": { required: true, requiredMessage: "Email is required", type: "email" },
+        "password": { required: true, requiredMessage:"Password is required", size: "8..100" },
+    };
+
+    function signup(){
+        var result = validate(); // ValidateResult object
+
+        if ( !result.hasErrors() ) {
+            data.success = true;
+            data.firstname = "";
+            data.lastname = "";
+            data.email = "";
+        }
+    }
+</cfscript>
+
 <cfoutput>
     <div class="row mb-4">
         <div class="col-12 col-md-8 col-lg-5 mx-auto">
@@ -11,8 +42,8 @@
                         <div class="col-12 col-md-6">
                             <input wire:model.debounce="firstname" class="form-control" type="text" placeholder="First Name">
                             <div class="error">
-                                <cfif args.validation.hasErrors( "firstname" )>
-                                    <cfloop array="#args.validation.getAllErrors( "firstname" )#" index="error">
+                                <cfif validation.hasErrors( "firstname" )>
+                                    <cfloop array="#validation.getAllErrors( "firstname" )#" index="error">
                                         <div class="error">#error#</div>
                                     </cfloop>
                                 </cfif>
@@ -21,8 +52,8 @@
                         <div class="col-12 col-md-6">
                             <input wire:model.debounce="lastname" class="form-control" type="text" placeholder="Last Name">
                             <div class="error">
-                                <cfif args.validation.hasErrors( "lastname" )>
-                                    <cfloop array="#args.validation.getAllErrors( "lastname" )#" index="error">
+                                <cfif validation.hasErrors( "lastname" )>
+                                    <cfloop array="#validation.getAllErrors( "lastname" )#" index="error">
                                         <div class="error">#error#</div>
                                     </cfloop>
                                 </cfif>
@@ -38,8 +69,8 @@
                         </span>
                     </div>
                     <div class="error">
-                        <cfif args.validation.hasErrors( "email" )>
-                            <cfloop array="#args.validation.getAllErrors( "email" )#" index="error">
+                        <cfif validation.hasErrors( "email" )>
+                            <cfloop array="#validation.getAllErrors( "email" )#" index="error">
                                 <div class="error">#error#</div>
                             </cfloop>
                         </cfif>
@@ -53,16 +84,16 @@
                         </div>
                     </div>
                     <div class="error">
-                        <cfif args.validation.hasErrors( "password" )>
-                            <cfloop array="#args.validation.getAllErrors( "password" )#" index="error">
+                        <cfif validation.hasErrors( "password" )>
+                            <cfloop array="#validation.getAllErrors( "password" )#" index="error">
                                 <div class="error">#error#</div>
                             </cfloop>
                         </cfif>
                     </div>
                     <div class="mt-4">
-                        <button type="submit" class="btn <cfif args.validation.hasErrors()>btn-secondary<cfelse>btn-primary</cfif> w-100">Sign up</button>
+                        <button type="submit" class="btn <cfif validation.hasErrors()>btn-secondary<cfelse>btn-primary</cfif> w-100">Sign up</button>
                     </div>
-                    <cfif args.success>
+                    <cfif success>
                         <div class="mt-4">
                             <span class="green">Success</span>
                         </div>

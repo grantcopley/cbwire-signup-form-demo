@@ -43,7 +43,7 @@ component {
 			invalidHTTPMethodHandler : "",
 			exceptionHandler         : "main.onException",
 			invalidEventHandler      : "",
-			customErrorTemplate      : "",
+			customErrorTemplate      : "coldbox/system/exceptions/Whoops.cfm",
 			// Application Aspects
 			handlerCaching           : false,
 			eventCaching             : false,
@@ -137,7 +137,11 @@ component {
 		 *
 		 * }
 		 */
-		moduleSettings = {};
+		moduleSettings = {
+			"cbwire": {
+				"autoInjectAssets": true
+			}
+		};
 
 		/**
 		 * --------------------------------------------------------------------------

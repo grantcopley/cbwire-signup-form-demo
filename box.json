@@ -26,11 +26,13 @@
     "installPaths":{
         "coldbox":"coldbox/",
         "testbox":"testbox/",
-        "cbwire":"modules/cbwire/"
+        "cbwire":"modules/cbwire/",
+        "cbvalidation":"modules/cbvalidation/"
     },
     "dependencies":{
         "coldbox":"^6.0.0",
-        "cbwire":"be"
+        "cbwire":"3.1.0-snapshot",
+        "cbvalidation":"^4.3.1+25"
     },
     "scripts":{},
     "testbox":{
