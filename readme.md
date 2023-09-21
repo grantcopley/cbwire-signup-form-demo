@@ -1,20 +1,32 @@
-# Form Validation using cbwire
+# CBWIRE Signup Form Example
 
-A reactive form with validation using cbwire.
+Become a web development hero with CBWIRE! Here you will a signup form example with the following features:
 
-## Installation
+* Single CBWIRE Component ( wires/SignupForm.cfm - provides all functionality )
+* Automatic validation of all fields
+* Automatically disabled submit button until all validations pass
+* Success message on form submission
 
-Using [CommandBox](https://www.ortussolutions.com/products/commandbox), running the following from the project's root folder:
+## Screenshot
 
-```bash
-box install
-box server start
-```
+<img width="941" alt="CleanShot 2023-09-21 at 11 58 11@2x" src="https://github.com/grantcopley/cbwire-signup-form-demo/assets/1197835/ee490c67-2f67-48f4-8a26-cbdcafe9a1c4">
 
-Enjoy the beautiful reactivity! - Grant
 
-## Other Resources
+## Core Files
 
-[cbwire Documentation](https://cbwire.ortusbooks.com)
+These files you'll want to open and tinker with to learn how to build your own Signup form with CBWIRE.
 
-[cbwire ForgeBox](https://forgebox.io/view/cbwire)
+* wires/SignupForm.cfm
+* layouts/Main.cfm
+
+## Requirements
+
+* CommandBox 5.8+
+
+## Getting Started
+
+* Clone this repo `git clone git@github.com:grantcopley/cbwire-signup-form-demo.git`
+* Use CommandBox to install dependencies `box install`
+* Start your CFML server `box server start --open`
+
+After the server completes startup, your browser will open automatically. Enjoy!
