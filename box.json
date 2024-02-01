@@ -31,7 +31,7 @@
     },
     "dependencies":{
         "coldbox":"^6.0.0",
-        "cbwire":"3.1.0-snapshot",
+        "cbwire":"3",
         "cbvalidation":"^4.3.1+25"
     },
     "scripts":{},
