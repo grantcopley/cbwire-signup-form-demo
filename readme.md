@@ -27,7 +27,7 @@ These files you'll want to open and tinker with to learn how to build your own S
 
 ## Getting Started
 
-* Clone this repo `git clone git@github.com:grantcopley/cbwire-signup-form-demo.git`
+* Clone this repo `git clone https://github.com/grantcopley/cbwire-signup-form-demo.git`
 * Use CommandBox to install dependencies `box install`
 * Start your CFML server `box server start --open`
 
